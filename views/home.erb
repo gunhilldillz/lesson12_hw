@@ -1,0 +1,94 @@
+<h1><b>HOMEWORK ASSIGNMENT #12</b></h1>
+<hr>
+
+<!-- Display Users and info -->
+
+<h3><b>Users</b></h3>
+<table class="table table-striped table-bordered table-condensed">
+<tr>
+  <th>ID #</th>
+  <th>Email</th> 
+  <th>Birthday</th>
+</tr>
+<tr>
+  <td><%= @user1.id %></td>
+  <td><a href="mailto:<%= @user1.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user1.email %></a></td> 
+  <td><%= @user1.birthday.strftime("%B %d, %Y") %></td>
+</tr>
+<tr>
+  <td><%= @user2.id %></td>
+  <td><a href="mailto:<%= @user2.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user2.email %></a></td> 
+  <td><%= @user2.birthday.strftime("%B %d, %Y") %></td>
+</tr>
+<tr>
+  <td><%= @user3.id %></td>
+  <td><a href="mailto:<%= @user3.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user3.email %></a></td> 
+  <td><%= @user3.birthday.strftime("%B %d, %Y") %></td>
+</tr>
+<tr>
+  <td><%= @user4.id %></td>
+  <td><a href="mailto:<%= @user4.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user4.email %></a></td> 
+  <td><%= @user4.birthday.strftime("%B %d, %Y") %></td>
+</tr>
+
+</table>
+
+<!-- Display Posts -->
+
+<h3><b>User Posts</b></h3>
+
+<table class="table table-striped table-bordered table-condensed">
+
+<tr>
+  <th>ID #</th>
+  <th>User Email</th> 
+  <th>Title</th>
+  <th>Body</th>
+  <th>Created</th>
+  <th>Updated</th>
+</tr>
+
+<tr>
+  <td><%= @user1.id %></td>
+  <td><a href="mailto:<%= @user1.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user1.email %></a></td> 
+  <td><b><%= @user1.posts.find(1).title %></b></td>
+  <td><p><%= @user1.posts.find(1).body %></p></td>
+  <td><%= @user1.posts.find(1).created_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  <td><%= @user1.posts.find(1).updated_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  </tr>
+
+  <tr>
+  <td><%= @user1.id %></td>
+  <td><a href="mailto:<%= @user1.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user1.email %></a></td> 
+  <td><b><%= @user1.posts.find(2).title %></b></td>
+  <td><p><%= @user1.posts.find(2).body %></p></td>
+  <td><%= @user1.posts.find(2).created_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  <td><%= @user1.posts.find(2).updated_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  </tr>
+
+  <tr>
+  <td><%= @user2.id %></td>
+  <td><a href="mailto:<%= @user2.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user2.email %></a></td> 
+  <td><b><%= @user2.posts.first.title %></b></td>
+  <td><p><%= @user2.posts.first.body %></p></td>
+  <td><%= @user2.posts.first.created_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  <td><%= @user2.posts.first.updated_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  </tr>
+
+<!-- Many issues here!  Looks like my database is not properly linking? -->
+
+  <tr>
+  <td><%= @user2.id %></td>
+  <td><a href="mailto:<%= @user2.email %>?Subject=Stop%20spamming%20me!" target="_top"><%= @user2.email %></a></td> 
+  <td><b><%= @user2.posts.second.title %></b></td>
+  <td><p><%= @user2.posts.find(4).body %></p></td>
+  <td><%= @user2.posts.find(4).created_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  <td><%= @user2.posts.find(4).updated_at.strftime("%A, %B %e, %Y, %l:%M %p ") %></td>
+  </tr>
+  
+</table>
+
+<img src="jmr1.svg" width="150">
+
+
+
